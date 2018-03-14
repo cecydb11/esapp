@@ -2,3 +2,30 @@
 	padding: 0;
 	margin: 0;
 }
+.login{
+	padding: 20px;
+	background-color: #CCC;
+}
+.boton{
+	 border: 1px solid #00b3b3;
+    border-radius: 8px;
+    background: #00ffff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#00ffff), to(#00b3b3));
+    background: -moz-linear-gradient(top, #00ffff, #00b3b3);
+    background: linear-gradient(to bottom, #00ffff, #00b3b3);
+    color: #ffffff;
+    }
+.boton:hover {
+    border: 1px solid #00ffff;
+    background: #00ffff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#00ffff), to(#00d7d7));
+    background: -moz-linear-gradient(top, #00ffff, #00d7d7);
+    background: linear-gradient(to bottom, #00ffff, #00d7d7);
+    color: #ffffff;
+}
+.boton:active {
+    background: #00b3b3;
+    background: -webkit-gradient(linear, left top, left bottom, from(#00b3b3), to(#00b3b3));
+    background: -moz-linear-gradient(top, #00b3b3, #00b3b3);
+    background: linear-gradient(to bottom, #00b3b3, #00b3b3);
+}
