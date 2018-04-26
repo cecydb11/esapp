@@ -6,10 +6,13 @@
 		<link rel="stylesheet" href="CSS/login.css">
 	</head>
 	<body>
+		<div id="incorrecto" class="incorrecto">
+    	<b>¡Datos incorrectos, intenta de nuevo!</b>
+    	</div>
 		<section class="main">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-4 offset-md-4" style="margin-top: 100px;">
+					<div class="col-md-4 offset-md-4" style="margin-top: 9%;">
 						<form class="login" id="login">
 							<div class="form-group text-center">
 								<img src="Imagenes/login.png" width="50%">
@@ -23,10 +26,10 @@
                         	<div class="form-group">               
 	                            <div class="input-group">
 	                                <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-user"></span></span>
-	                                <input class="form-control input-lg" type="password" id="contrasena" required placeholder="Contraseña"> 
+	                                <input class="form-control input-lg" type="password" id="contra" required placeholder="Contraseña"> 
 	                        	</div>
                         	</div>
-                        	<button type="submit" class="btn btn-lg btn-block boton">Acceder</button>  
+                        	<button type="submit" id="ingresar" class="btn btn-lg btn-block boton">Acceder</button>  
 						</form>
 					</div>
 				</div>
