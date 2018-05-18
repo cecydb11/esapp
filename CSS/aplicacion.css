@@ -6,10 +6,35 @@
 #mostrarEmpresas{
     background-color: black;
     height: 535px;
+    overflow-y: scroll;
 }
 
 .empresas{
     background-color: white;
+    height: 200px;
+    width: 200px;
+    margin: 15px;
+    float: left;
+    text-align: center;
+    padding-top: 3%;
+    cursor: pointer;
+}
+
+#topDiez{
+    overflow-y: scroll;
+    background-color: orange;
     height: 535px;
 
+}
+
+.topEmpresas{
+    background-color: blue;
+    height: 260px;
+    width: 260px;
+    margin: 15px;
+    float: left;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 20%;
+    cursor: pointer;
 }

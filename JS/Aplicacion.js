@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	llenarCategorias();	
+	topDiez();
 });
 
 function llenarCategorias() {
@@ -17,8 +18,23 @@ function llenarCategorias() {
 	});
 }
 
+function topDiez(){
+	$.ajax({
+		type: "POST",
+		url: "aplicacion.php",
+		data: ({
+			funcion : "topDiez"
+		}),
+		dataType: "html",
+		success: function (msg) {
+			$("#topDiez").html(msg);
+			//var e = prompt("", msg);
+		}
+	});	
+}
+
 $(document).on("click", ".categorias", function(){
-    var id = $(this).val();
+    var id = $(this).attr("value");
     $.ajax({
         url:"aplicacion.php",
         type: "POST",
@@ -29,6 +45,26 @@ $(document).on("click", ".categorias", function(){
     })
     .done(function(msg){
     	$("#mostrarEmpresas").html(msg)
+    })
+    .fail(function(){
+        alert(msg);
+    });
+});
+
+$(document).on("click", ".empresas, .topEmpresas", function(){
+    var id = $(this).attr("idEmpresa");
+    $.ajax({
+        url:"aplicacion.php",
+        type: "POST",
+        data:({
+            funcion: "verDetallesEmpresa",
+            id: id
+        }),
+    })
+    .done(function(msg){    	
+    	$("#modalDetalles").modal("show"); 
+    	$("#realizarPedido").attr('idEmpresa', id);  	    	
+    	$("#datos_detalle").html(msg)
     })
     .fail(function(){
         alert(msg);

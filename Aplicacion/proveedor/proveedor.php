@@ -27,24 +27,13 @@ if($_POST["funcion"]=="topDiez"){
 		$output = ("SELECT * FROM proveedores WHERE ID_Proveedor = ".$id);
 		foreach($con->query($output) as $salida) {
 			echo "<div class='topEmpresas' idEmpresa = ".$salida["ID_Proveedor"]." >".utf8_encode($salida["Nombre"])."</div>";
-		}				
-	}	
-}
+		}		
+		
+	}
 
-if($_POST["funcion"]=="verDetallesEmpresa"){	
-	$output = ("SELECT proveedores.*, categoria_producto.Nombre as Categoria FROM proveedores LEFT JOIN categoria_producto ON ID_Categoria = Categoria_FK WHERE ID_Proveedor = ".$_POST["id"]);
-	foreach($con->query($output) as $salida) {
-		echo "<div class='detalleEmpresa'>
-				<h4>".utf8_encode($salida["Nombre"])."</h4>
-				<h5>Dirección: ".utf8_encode($salida["Domicilio"])."</h5>
-				<h5>Contacto: ".utf8_encode($salida["Contacto"])."</h5>
-				<h5>Teléfono: ".utf8_encode($salida["Telefono"])."</h5>
-				<h5>Email: ".utf8_encode($salida["Correo"])."</h5>
-				<h5>Categoria: ".utf8_encode($salida["Categoria"])."</h5>
-			</div>";
-	}	
+	
+	
 }
-
 
 
 
