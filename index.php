@@ -1,42 +1,55 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Login</title>
-		<link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css" type="text/css">
-		<link rel="stylesheet" href="CSS/login.css">
-	</head>
-	<body>
-		<div id="incorrecto" class="incorrecto">
-    	<b>¡Datos incorrectos, intenta de nuevo!</b>
-    	</div>
-		<section class="main">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4 offset-md-4" style="margin-top: 9%;">
-						<form class="login" id="login">
-							<div class="form-group text-center">
-								<img src="Imagenes/login.png" width="50%">
-							</div> 
-							<div class="form-group">               
-	                            <div class="input-group">
-	                                <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-user"></span></span>
-	                                <input class="form-control input-lg" type="text" id="usuario" required placeholder="Usuario"/>
-	                        	</div>
-                        	</div>  
-                        	<div class="form-group">               
-	                            <div class="input-group">
-	                                <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-user"></span></span>
-	                                <input class="form-control input-lg" type="password" id="contra" required placeholder="Contraseña"> 
-	                        	</div>
-                        	</div>
-                        	<button type="submit" id="ingresar" class="btn btn-lg btn-block boton">Acceder</button>  
-						</form>
-					</div>
-				</div>
-			</div>
-		</section>
-		<script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
-		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="JS/login.js"></script>
-	</body>
+  <head>
+    <title>Inicio</title>
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="CSS/aplicacion.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <img src="Imagenes/logo.png" width="5%"><br>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="Aplicacion/login">Iniciar Sesión</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Perfil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Registra tu empresa</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Categorías
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="listaCategorias">
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cerrar Sesión</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8" id="mostrarEmpresas">
+          
+        </div>
+
+         <div class="col-md-4" style="background-color: brown; height: 535px;">
+          
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="JS/Aplicacion.js"></script>
+  </body>
 </html>

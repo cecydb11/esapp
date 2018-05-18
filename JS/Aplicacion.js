@@ -2,18 +2,36 @@ $(document).ready(function() {
 	llenarCategorias();	
 });
 
-
 function llenarCategorias() {
-	var data= "bus="+$("#buscador").val();	
 	$.ajax({
-		url: 'Aplicacion.php',
-		type: 'POST',
-		data: data
-	})
-	.done(function(res) {
-		$("#Books").html(res);
-	})
-	.fail(function() {
-		alert(res);
-	})
+		type: "POST",
+		url: "aplicacion.php",
+		data: ({
+			funcion : "llenarCategorias"
+		}),
+		dataType: "html",
+		success: function (msg) {
+			$("#listaCategorias").html(msg);
+			//var e = prompt("", msg);
+		}
+	});
 }
+
+$(document).on("click", ".categorias", function(){
+    var id = $(this).val();
+    $.ajax({
+        url:"aplicacion.php",
+        type: "POST",
+        data:({
+            funcion: "verEmpresasCategoria",
+            id: id
+        }),
+    })
+    .done(function(msg){
+    	$("#mostrarEmpresas").html(msg)
+    })
+    .fail(function(){
+        alert(msg);
+    });
+
+});
