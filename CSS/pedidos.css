@@ -1,0 +1,10 @@
+.fondo{
+	margin-top: 10%;
+	margin-left:25%;
+	height: 55%;
+	width:55%;
+	background-color: #CCC;
+}
+.botones button{
+	margin: 11%;
+}

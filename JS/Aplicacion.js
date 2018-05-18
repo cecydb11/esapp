@@ -7,6 +7,7 @@ function llenarCategorias() {
 	$.ajax({
 		type: "POST",
 		url: "aplicacion.php",
+
 		data: ({
 			funcion : "llenarCategorias"
 		}),
@@ -65,6 +66,25 @@ $(document).on("click", ".empresas, .topEmpresas", function(){
     	$("#modalDetalles").modal("show"); 
     	$("#realizarPedido").attr('idEmpresa', id);  	    	
     	$("#datos_detalle").html(msg)
+    })
+    .fail(function(){
+        alert(msg);
+    });
+});
+
+$(document).on("click", "#realizarPedido", function(){
+    var idEmpresa = $(this).attr("idEmpresa");
+    $.ajax({
+        url:"Aplicacion/Pedidos/pedidos.php",
+        type: "POST",
+        data:({
+            funcion: "verEmp",
+            idEmpresa: idEmpresa
+        }),
+    })
+    .done(function(msg){  
+    	window.open('Aplicacion/Pedidos/index.php?idEmpresa='+idEmpresa,'_blank');
+    	//window.location.reload(false);
     })
     .fail(function(){
         alert(msg);
