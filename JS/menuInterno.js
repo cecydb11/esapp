@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	llenarCategorias();	
+    topDiez();
 });
 
 function llenarCategorias() {
@@ -34,4 +35,59 @@ $(document).on("click", ".categorias", function(){
     .fail(function(){
         alert(msg);
     });
+});
+
+function topDiez(){
+    $.ajax({
+        type: "POST",
+        url: "aplicacion.php",
+        data: ({
+            funcion : "topDiez"
+        }),
+        dataType: "html",
+        success: function (msg) {
+            $("#topDiez").html(msg);
+            //var e = prompt("", msg);
+        }
+    }); 
+}
+
+$(document).on("click", ".empresas, .topEmpresas", function(){
+    var id = $(this).attr("idEmpresa");
+    $.ajax({
+        url:"aplicacion.php",
+        type: "POST",
+        data:({
+            funcion: "verDetallesEmpresa",
+            id: id
+        }),
+    })
+    .done(function(msg){        
+        $("#modalDetalles").modal("show"); 
+        $("#realizarPedido").attr('idEmpresa', id);             
+        $("#datos_detalle").html(msg)
+    })
+    .fail(function(){
+        alert(msg);
+    });
+});
+
+$(document).on("click", "#realizarPedido", function(){
+    var idEmpresa = $(this).attr("idEmpresa");
+    $.ajax({
+        url:"Aplicacion/Pedidos/pedidos.php",
+        type: "POST",
+        data:({
+            funcion: "verEmp",
+            idEmpresa: idEmpresa
+        }),
+    })
+    .done(function(msg){  
+        window.open('Aplicacion/Pedidos/index.php?idEmpresa='+idEmpresa,'_blank');
+        //window.location.reload(false);
+    })
+    .fail(function(){
+        alert(msg);
+    });
+
 });
