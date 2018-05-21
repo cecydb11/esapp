@@ -68,14 +68,13 @@ $(document).on("click", ".empresas, .topEmpresas", function(){
         $("#datos_detalle").html(msg)
     })
     .fail(function(){
-        alert(msg);
     });
 });
 
 $(document).on("click", "#realizarPedido", function(){
     var idEmpresa = $(this).attr("idEmpresa");
     $.ajax({
-        url:"Aplicacion/Pedidos/pedidos.php",
+        url:"../Pedidos/pedidos.php",
         type: "POST",
         data:({
             funcion: "verEmp",
@@ -83,11 +82,10 @@ $(document).on("click", "#realizarPedido", function(){
         }),
     })
     .done(function(msg){  
-        window.open('Aplicacion/Pedidos/index.php?idEmpresa='+idEmpresa,'_blank');
+        window.open('../Pedidos/index.php?idEmpresa='+idEmpresa,'_blank');
         //window.location.reload(false);
     })
     .fail(function(){
-        alert(msg);
     });
 
 });
