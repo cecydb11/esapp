@@ -14,12 +14,11 @@
             <a class="nav-link" href="Aplicacion/login">Iniciar Sesión</a>
           </li>
           <li class="nav-item">
-<<<<<<< HEAD
-=======
+
             <a class="nav-link" href="#">Perfil</a>
           </li>
           <li class="nav-item">
->>>>>>> 8ba40b9f5670e72fdc0f7bdc7ed0a4736bd5b6a1
+
             <a class="nav-link" href="Aplicacion/Empresa">Regístrate</a>
           </li>
           <li class="nav-item dropdown">

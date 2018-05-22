@@ -1,9 +1,8 @@
 $(document).ready(function() {
 	llenarCategorias();	
-<<<<<<< HEAD
-=======
+
     topDiez();
->>>>>>> 8ba40b9f5670e72fdc0f7bdc7ed0a4736bd5b6a1
+
 });
 
 function llenarCategorias() {
@@ -38,8 +37,7 @@ $(document).on("click", ".categorias", function(){
     .fail(function(){
         alert(msg);
     });
-<<<<<<< HEAD
-=======
+
 });
 
 function topDiez(){
@@ -93,5 +91,5 @@ $(document).on("click", "#realizarPedido", function(){
     .fail(function(){
     });
 
->>>>>>> 8ba40b9f5670e72fdc0f7bdc7ed0a4736bd5b6a1
+
 });

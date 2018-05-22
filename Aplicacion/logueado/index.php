@@ -1,15 +1,11 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 8ba40b9f5670e72fdc0f7bdc7ed0a4736bd5b6a1
 <!DOCTYPE html>
 <html>
   <head>
     <title>Inicio</title>
-<<<<<<< HEAD
+
     <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css" type="text/css">
-=======
->>>>>>> 8ba40b9f5670e72fdc0f7bdc7ed0a4736bd5b6a1
+
   </head>
   <body>
 

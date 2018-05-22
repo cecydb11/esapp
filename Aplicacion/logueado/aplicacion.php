@@ -1,9 +1,7 @@
 <?php
-<<<<<<< HEAD
-include("conexion.php");
-=======
+
 include("../../conexion.php");
->>>>>>> 8ba40b9f5670e72fdc0f7bdc7ed0a4736bd5b6a1
+
 
 if($_POST["funcion"]=="llenarCategorias"){	
 	$output = ("SELECT * FROM categoria_producto");
