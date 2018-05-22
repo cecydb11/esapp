@@ -1,5 +1,9 @@
 $(document).ready(function() {
 	llenarCategorias();	
+<<<<<<< HEAD
+=======
+    topDiez();
+>>>>>>> 8ba40b9f5670e72fdc0f7bdc7ed0a4736bd5b6a1
 });
 
 function llenarCategorias() {
@@ -34,4 +38,60 @@ $(document).on("click", ".categorias", function(){
     .fail(function(){
         alert(msg);
     });
+<<<<<<< HEAD
+=======
+});
+
+function topDiez(){
+    $.ajax({
+        type: "POST",
+        url: "aplicacion.php",
+        data: ({
+            funcion : "topDiez"
+        }),
+        dataType: "html",
+        success: function (msg) {
+            $("#topDiez").html(msg);
+            //var e = prompt("", msg);
+        }
+    }); 
+}
+
+$(document).on("click", ".empresas, .topEmpresas", function(){
+    var id = $(this).attr("idEmpresa");
+    $.ajax({
+        url:"aplicacion.php",
+        type: "POST",
+        data:({
+            funcion: "verDetallesEmpresa",
+            id: id
+        }),
+    })
+    .done(function(msg){        
+        $("#modalDetalles").modal("show"); 
+        $("#realizarPedido").attr('idEmpresa', id);             
+        $("#datos_detalle").html(msg)
+    })
+    .fail(function(){
+    });
+});
+
+$(document).on("click", "#realizarPedido", function(){
+    var idEmpresa = $(this).attr("idEmpresa");
+    $.ajax({
+        url:"../Pedidos/pedidos.php",
+        type: "POST",
+        data:({
+            funcion: "verEmp",
+            idEmpresa: idEmpresa
+        }),
+    })
+    .done(function(msg){  
+        window.open('../Pedidos/index.php?idEmpresa='+idEmpresa,'_blank');
+        //window.location.reload(false);
+    })
+    .fail(function(){
+    });
+
+>>>>>>> 8ba40b9f5670e72fdc0f7bdc7ed0a4736bd5b6a1
 });
