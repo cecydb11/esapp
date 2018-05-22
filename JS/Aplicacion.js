@@ -7,6 +7,7 @@ function llenarCategorias() {
 	$.ajax({
 		type: "POST",
 		url: "aplicacion.php",
+
 		data: ({
 			funcion : "llenarCategorias"
 		}),
