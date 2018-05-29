@@ -9,32 +9,30 @@
 </head>
 <body>
 	<div class="fondo">
-        <label for="FechaP">Fecha Pedido</label>
-        <input  type="date" id="FechaP" ></input >
-        <label for="FechaE">Fecha Entrega</label>
-        <input  type="date" id="FechaE" ></input >
-        <label for="ID_empresa">Proveedor</label>
-        <input type='text' id='ID_empresa' idEmpresa=" <?php echo $idEmpresa ?> " value='' disabled></input>
-<<<<<<< HEAD
-        <select id="Catalogo">
-        </select>
-        <select id="Cliente">
-        </select>
-        <label for="Pedido_FK">Pedido</label>
-        <input type='text' id='Pedido_FK' idEmpresa=" <?php echo $idEmpresa ?> " value='' disabled></input>
-=======
-        <label for="pedido">Pedido</label>
-        <input type="text" id="pedido_FK"></input>
-        <label for="catalogo">Catalogo</label>
-        <input type="text" id="catalogo"></input>
-        <select id="cliente">
-        </select>
->>>>>>> ebd3feaaee05c89a46d2a237ad21ce61e86a13a7
-        <div class="botones">
-        	<button type="button" id="btnR">Registrar</button>
-        	<button type="button" id="btnM">Modificar</button>
-        	<button type="button" id="btnE">Eliminar</button>
-        </div>
+                <label for="FechaP">Fecha Pedido</label>
+                <input  type="date" id="FechaP" value="<?php echo date('Y-m-d'); ?>" disabled></input>
+                <label for="FechaE">Fecha Entrega</label>
+                <input  type="date" id="FechaE" min="<?php echo date('Y-m-d'); ?>" ></input>
+                <label for="ID_empresa">Proveedor</label>
+                <input type='text' id='ID_empresa' idEmpresa=" <?php echo $idEmpresa ?> " value='' disabled></input>
+                <select id="Cliente">
+                </select>
+                <select id="Catalogo">
+                </select>
+                <label for="Cantidad">Cantidad</label>
+                <input type="number" id="Cantidad"></input>
+                <table class="TablaPedidos">
+                        <tr>
+                                <td>Cantidad</td>
+                                <td>Producto</td>
+                                <td>Precio</td>
+                                <tbody id="Datos"></tbody>
+                        </tr>
+                </table>
+                <div class="botones">
+        	       <button type="button" id="btnA">Agregar</button>
+        	       <button type="button" id="btnG">Guardar</button>
+                </div>
 	</div>
         <script type="text/javascript" src="../../JS/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="../../JS/pedidos.js"></script>
