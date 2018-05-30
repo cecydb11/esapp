@@ -14,9 +14,11 @@
             <a class="nav-link" href="Aplicacion/login">Iniciar Sesión</a>
           </li>
           <li class="nav-item">
+
             <a class="nav-link" href="#">Perfil</a>
           </li>
           <li class="nav-item">
+
             <a class="nav-link" href="Aplicacion/Empresa">Regístrate</a>
           </li>
           <li class="nav-item dropdown">

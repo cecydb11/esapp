@@ -1,7 +1,11 @@
+
 <!DOCTYPE html>
 <html>
   <head>
     <title>Inicio</title>
+
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css" type="text/css">
+
   </head>
   <body>
 

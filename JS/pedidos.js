@@ -1,9 +1,19 @@
 $(document).ready(function(e) {
 	verEmp();
 	selectCliente();
+<<<<<<< HEAD
 	selectCatalogo();
 });
 
+=======
+
+	selectCatalogo();
+});
+
+
+
+
+>>>>>>> e6f7c207f11bca6493315da8551092c97b370cdd
 function selectCliente(){
 	$.ajax({
 		type:"POST",
@@ -13,6 +23,10 @@ function selectCliente(){
 		}),
 		dataType:"html",
 		success: function(msg){
+<<<<<<< HEAD
+=======
+
+>>>>>>> e6f7c207f11bca6493315da8551092c97b370cdd
 			$("#Cliente").html(msg);
 		}
 	});
@@ -29,6 +43,12 @@ function selectCatalogo(){
 		dataType:"html",
 		success: function(msg){
 			$("#Catalogo").html(msg);
+<<<<<<< HEAD
+=======
+
+			$("#cliente").html(msg);
+
+>>>>>>> e6f7c207f11bca6493315da8551092c97b370cdd
 		}
 	});
 }
@@ -44,6 +64,7 @@ function verEmp(){
 		dataType:"html",
 		success: function(msg){
 			$("#ID_empresa").val(msg);
+<<<<<<< HEAD
 		}
 	});
 }
@@ -60,6 +81,20 @@ $(document).on("click", "#btnG",function(){
 		Detalles[cont]=Array(Catalogo,Cantidad);
 		cont++;
 	});
+=======
+
+		}
+	});
+}
+$(document).on("click", "#btnR",function(){
+
+			//alert(msg);
+		
+	});
+
+/*$(document).on("click", "#btnR",function(){
+	
+>>>>>>> e6f7c207f11bca6493315da8551092c97b370cdd
 	$.ajax({
 		type:"POST",
 		url:"pedidos.php",
@@ -68,8 +103,20 @@ $(document).on("click", "#btnG",function(){
 			ID_empresa : $("#ID_empresa").attr('idEmpresa'),
 			FechaP : $("#FechaP").val(),
 			FechaE : $("#FechaE").val(),
+<<<<<<< HEAD
 			Cliente : $("#Cliente option:selected").val(),
 			Detalles : Detalles
+=======
+
+			ID_empresa : $("#ID_empresa").val(),
+			Catalogo : $("#Catalogo option:selected").val(),
+			Cliente : $("#Cliente option:selected").val()
+
+			ID_empresa : $("#Unidad option:selected").val(),
+			Existencia : $("#Existencia").val(),
+			Existencia_m : $("#Existencia_m").val()
+
+>>>>>>> e6f7c207f11bca6493315da8551092c97b370cdd
 		}),
 			dataType: "html",
 			success: function(msg)	{
@@ -80,6 +127,7 @@ $(document).on("click", "#btnG",function(){
 	});
 });
 
+<<<<<<< HEAD
 $(document).on("click", "#btnA",function(){
 	if($('#Catalogo option:selected').val() == ""){
 		alert("Debes elegir un producto.");
@@ -103,4 +151,7 @@ $(document).on("click", "#btnA",function(){
 	}
 
 });
+=======
+*/
+>>>>>>> e6f7c207f11bca6493315da8551092c97b370cdd
 

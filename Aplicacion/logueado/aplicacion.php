@@ -1,5 +1,7 @@
 <?php
+
 include("../../conexion.php");
+
 
 if($_POST["funcion"]=="llenarCategorias"){	
 	$output = ("SELECT * FROM categoria_producto");

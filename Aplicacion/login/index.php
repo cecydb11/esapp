@@ -6,9 +6,6 @@
 		<link rel="stylesheet" href="../../CSS/login.css">
 	</head>
 	<body>
-		<div id="incorrecto" class="incorrecto">
-    	<b>¡Datos incorrectos, intenta de nuevo!</b>
-    	</div>
 		<section class="main">
 			<div class="container">
 				<div class="row">
@@ -30,6 +27,10 @@
 	                        	</div>
                         	</div>
                         	<button type="submit" id="ingresar" class="btn btn-lg btn-block boton">Acceder</button>  
+                        	<br>
+                        	<div class="alert alert-danger incorrecto" id="incorrecto">
+							  <strong>¡Datos incorrectos!</strong> Intentalo de nuevo.
+							</div>
 						</form>
 					</div>
 				</div>
