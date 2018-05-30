@@ -60,15 +60,17 @@
     </script>
     <br>
     <?php 
+    include("../conexion.php");
     $imagenes = '';
     $buscarProve = $con->query("SELECT * FROM proveedores WHERE Usuario_FK = '".$nombreUsuario."'");
     foreach ($buscarProve as $row);
     $buscarProductos = $con->query("SELECT * FROM catalogo WHERE Proveedor_FK = '".$row["ID_Proveedor"]."'");
     $con = 1;
     foreach ($buscarProductos as $key) {
-    	$produc = $con->query("SELECT * FROM productos WHERE ID_Producto = '".$key["Producto_FK"]."'");
-    	foreach ($produc as $pro) {
+    	$produc = "SELECT * FROM productos WHERE ID_Producto = '".$key["Producto_FK"]."'";
+		foreach ($con->query($produc) as $pro) {
     		if ($con == 1) {
+    		
     		$imagenes .= '
 						<div class="carousel-item active">
 					      <img class="d-block w-100" style="width:10%" src="Uploads/'.$key["Producto_FK"].'.jpg">
@@ -90,7 +92,7 @@
 						    ';
 	    	}
 	    	$con --;
-    	}
+	    }
     } 
      ?>
   	<div class="container-fluid">
