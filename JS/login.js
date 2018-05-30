@@ -20,7 +20,7 @@ $(document).ready(function(){
 						$("#incorrecto").slideUp("slow");					
 					},3000);
 				}else{
-					window.location.href = "../logueado";
+					window.location.href = "../../esapp/Aplicacion/";
 				}
 			}
 		});		

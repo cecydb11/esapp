@@ -1,6 +1,6 @@
 <?php
 
-include("../../conexion.php");
+include("../conexion.php");
 
 
 if($_POST["funcion"]=="llenarCategorias"){	
@@ -46,6 +46,7 @@ if($_POST["funcion"]=="verDetallesEmpresa"){
 			</div>";
 	}	
 }
+
 
 
 

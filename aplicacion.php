@@ -9,6 +9,14 @@ if($_POST["funcion"]=="llenarCategorias"){
 	
 }
 
+/*if($_POST["funcion"]=="llenarCategoriasProductos"){	
+	$output = ("SELECT * FROM categoria_producto");
+	foreach($con->query($output) as $salida) {
+		echo "<option value=".$salida["ID_Categoria"].">$salida[Nombre]</option>";
+	}		
+	
+}
+*/
 if($_POST["funcion"]=="verEmpresasCategoria"){	
 	$output = ("SELECT * FROM proveedores WHERE Categoria_FK = ".$_POST["id"]);
 	foreach($con->query($output) as $salida) {

@@ -1,5 +1,5 @@
 <?php 
-include("../../conexion.php");
+include("../conexion.php");
 	if ($_POST["funcion"] == "SelectCategorias") {
 		$buscar = $con->query("SELECT * FROM categoria_producto");
 		echo "<option value='-1' selected disabled>Seleccione una opción</option>";
@@ -28,7 +28,6 @@ include("../../conexion.php");
 			echo "Error";
 		}
 	}
-<<<<<<< HEAD
 	if ($_POST["funcion"]=="ModificarUsuario") {
 		$insertar = $con->query("UPDATE usuarios SET Usuario= '".$_POST["user"]."', Contra= '".$_POST["pass"]."',Tipo= '".$_POST["tipo"]."' WHERE ID_Usuario = '".$_POST["id"]."'");
 		if ($insertar) {
@@ -37,7 +36,5 @@ include("../../conexion.php");
 			echo "Error";
 		}
 	}
-=======
->>>>>>> 8ba40b9f5670e72fdc0f7bdc7ed0a4736bd5b6a1
 
  ?>

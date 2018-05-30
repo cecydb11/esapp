@@ -1,8 +1,11 @@
+
 <!DOCTYPE html>
 <html>
   <head>
     <title>Inicio</title>
+
     <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css" type="text/css">
+
   </head>
   <body>
 
@@ -33,6 +36,7 @@
              </div> 
           <div class="modal-footer">
             <button type="button" id="realizarPedido" idEmpresa = "" class="btn btn-primary">Realizar pedido</button>
+            <button type="button" id="verUbicacion" idEmpresa = "" class="btn btn-success">Ver Productos</button>
             <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
           </div>
         </div>

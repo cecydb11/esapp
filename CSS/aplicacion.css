@@ -38,3 +38,25 @@
     padding-top: 20%;
     cursor: pointer;
 }
+
+.contenedor{
+    background-color: #ccc;
+    height: 285px;
+}
+
+.contenedorusuario{
+    background-color: #ccc;
+    height: 260px;
+    padding: 2%;
+}
+
+.contenedorperfil{
+    background-color: #ccc;
+    height: 474px;
+    padding: 2%;
+}
+.contenedorImagen{
+    background-color: #ccc;
+    height: 150px;
+    padding: 2%;
+}

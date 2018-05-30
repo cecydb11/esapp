@@ -3,13 +3,24 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Registrar</title>
-	<link rel="stylesheet" href="../../Bootstrap/css/bootstrap.min.css" type="text/css">
-	<link rel="stylesheet" href="../../CSS/empresa.css">
+	<link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="../CSS/empresa.css">
 </head>
 <body>   
-<?php include("../menu.php"); ?>
 <br>
 <br>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<label>Tipo de usuario</label>
+					<select class="form-control" id="tipo">
+						<option value="0" selected disabled>Seleccione una opción</option>
+						<option value="admin">Proveedor</option>
+						<option value="normal">Cliente</option>
+					</select>
+			</div>
+		</div>
+	</div>
 	<form id="formUsuarios">
 		<div class="container-fluid">
 			<div class="row">
@@ -117,6 +128,7 @@
 			</div>
 		</div>
 	</form>
-	<script type="text/javascript" src="../../JS/empresa.js"></script>
+	<script src="../JS/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../JS/empresa.js"></script>
 </body>
 </html>

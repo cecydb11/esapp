@@ -64,7 +64,8 @@ $(document).on("click", ".empresas, .topEmpresas", function(){
     })
     .done(function(msg){    	
     	$("#modalDetalles").modal("show"); 
-    	$("#realizarPedido").attr('idEmpresa', id);  	    	
+    	$("#realizarPedido").attr('idEmpresa', id);
+        $("#verUbicacion").attr('idEmpresa', id); 	    	
     	$("#datos_detalle").html(msg)
     })
     .fail(function(){
@@ -75,7 +76,7 @@ $(document).on("click", ".empresas, .topEmpresas", function(){
 $(document).on("click", "#realizarPedido", function(){
     var idEmpresa = $(this).attr("idEmpresa");
     $.ajax({
-        url:"Aplicacion/Pedidos/pedidos.php",
+        url:"../Aplicacion/Pedidos/pedidos.php",
         type: "POST",
         data:({
             funcion: "verEmp",
@@ -83,7 +84,7 @@ $(document).on("click", "#realizarPedido", function(){
         }),
     })
     .done(function(msg){  
-    	window.open('Aplicacion/Pedidos/index.php?idEmpresa='+idEmpresa,'_blank');
+    	window.open('../Aplicacion/Pedidos/index.php?idEmpresa='+idEmpresa,'_blank');
     	//window.location.reload(false);
     })
     .fail(function(){
@@ -91,3 +92,21 @@ $(document).on("click", "#realizarPedido", function(){
     });
 
 });
+
+$(document).on('click', '#verUbicacion', function() {
+    var idEmpresa = $(this).attr("idEmpresa");
+    window.open('../Aplicacion/indexUbicacion.php?idEmpresa='+idEmpresa,'_blank');
+});
+
+    
+    $(".imagenproducto").change(function() {
+        var file = this.files[0];
+        var imagefile = file.type;
+        var match= ["image/jpeg","image/png","image/jpg"];
+        if(!((imagefile==match[0]) || (imagefile==match[1]) || (imagefile==match[2]))){
+            alert('Porfavor seleccione un archivo valido (JPEG/JPG/PNG).');
+            $(".imagenproducto").val('');
+            $(".imagenproducto").focus();
+            return false;
+        }
+    });

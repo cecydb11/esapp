@@ -1,5 +1,5 @@
 <?php
-	include("../../conexion.php");
+	include("conexion.php");
 	$res= "";
 	session_start();
 	sleep(1);
